@@ -3,40 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tajkia Tashneem Rahman - Digital Marketing Expert</title>
+    <title>Tajkia Tashneem - Digital Marketer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class'
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    keyframes: {
+                        slideIn: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(0)' }
+                        }
+                    },
+                    animation: {
+                        slideIn: 'slideIn 0.3s ease-out'
+                    }
+                }
+            }
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        .gradient-text {
-            background: linear-gradient(45deg, #6366f1, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
 </head>
 <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 shadow-sm">
+    <nav class="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold gradient-text">TTR</a>
+            <a href="#" class="text-2xl font-bold text-purple-600 dark:text-purple-400">TTR</a>
             <div class="flex items-center gap-6">
                 <div class="hidden md:flex gap-8">
                     <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#expertise" class="nav-link">Expertise</a>
+                    <a href="#tools" class="nav-link">Tools</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#blog" class="nav-link">Blog</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
                 <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -51,117 +50,69 @@
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md z-40 hidden shadow-lg">
-        <div class="container mx-auto px-6 py-4 flex flex-col gap-4">
+    <div id="mobile-menu" class="md:hidden fixed inset-y-0 right-0 w-64 bg-white dark:bg-gray-800 shadow-2xl transform translate-x-full transition-transform duration-300">
+        <div class="p-6 flex flex-col gap-6">
             <a href="#home" class="nav-link">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#expertise" class="nav-link">Expertise</a>
+            <a href="#tools" class="nav-link">Tools</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#blog" class="nav-link">Blog</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-24 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-800 dark:to-gray-900">
+    <!-- Sections -->
+    <section id="home" class="min-h-screen pt-24 px-6">
+        <!-- Home content from previous version -->
+    </section>
+
+    <section id="tools" class="py-20 bg-gray-50 dark:bg-gray-800">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2 animate-float">
-                    <img src="https://i.ibb.co/KpYTXLgy/Whats-App-Image-2025-04-01-at-01-01-12.jpg" 
-                         alt="Tajkia Tashneem Rahman" 
-                         class="w-80 h-80 rounded-full object-cover border-8 border-white dark:border-gray-800 shadow-2xl">
+            <h2 class="text-4xl font-bold mb-12 text-center">Marketing Tools</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="tool-card p-6 bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:transform hover:scale-105 transition">
+                    <i class="fab fa-google text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Google Analytics</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Advanced traffic analysis and user behavior tracking</p>
                 </div>
-                <div class="md:w-1/2 space-y-6">
-                    <h1 class="text-4xl md:text-6xl font-bold gradient-text">Tajkia Tashneem Rahman</h1>
-                    <p class="text-xl text-gray-600 dark:text-gray-300">Digital Marketing Specialist & Brand Strategist</p>
-                    <div class="flex gap-4">
-                        <a href="#contact" class="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-3 rounded-full hover:shadow-lg transition">
-                            Let's Collaborate <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
+                <!-- Add more tool cards -->
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20">
+    <section id="projects" class="py-20">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-bold mb-8 gradient-text">About Me</h2>
-                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                    Since August 2023, I've been crafting digital success stories through strategic social media campaigns, 
-                    eye-catching Canva designs, and data-driven Google marketing solutions. My passion lies in transforming 
-                    brands into digital powerhouses that resonate with their audience.
-                </p>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12">
-                    <div class="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition">
-                        <i class="fas fa-chart-line text-4xl text-purple-500 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">ROI Focused</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Maximizing your marketing investment</p>
-                    </div>
-                    <!-- Add more stats cards -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Expertise Section -->
-    <section id="expertise" class="py-20 bg-gray-50 dark:bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-12 text-center gradient-text">My Expertise</h2>
+            <h2 class="text-4xl font-bold mb-12 text-center">Featured Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:transform hover:scale-105 transition">
-                    <div class="w-16 h-16 bg-purple-100 dark:bg-gray-700 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-hashtag text-3xl text-purple-500"></i>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="project1.jpg" alt="Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Social Media Campaign</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Increased engagement by 150% for e-commerce brand</p>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4">Social Media Marketing</h3>
-                    <ul class="space-y-3 text-gray-600 dark:text-gray-300">
-                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i>Content Strategy</li>
-                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i>Community Management</li>
-                        <li><i class="fas fa-check-circle text-purple-500 mr-2"></i>Influencer Collaboration</li>
-                    </ul>
                 </div>
-                <!-- Add more expertise cards -->
+                <!-- Add more project cards -->
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20">
+    <section id="blog" class="py-20 bg-gray-50 dark:bg-gray-800">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
-                <h2 class="text-4xl font-bold mb-8 text-center gradient-text">Let's Connect</h2>
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-900 rounded-xl">
-                            <div class="w-12 h-12 bg-purple-500 text-white rounded-lg flex items-center justify-center">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Email</p>
-                                <a href="mailto:rahmantajkia5@gmail.com" class="text-gray-600 dark:text-gray-300 hover:text-purple-500">rahmantajkia5@gmail.com</a>
-                            </div>
-                        </div>
-                        <!-- Add more contact blocks -->
-                        <div class="flex gap-6 mt-8">
-                            <a href="https://www.facebook.com/official.tashneem" target="_blank" class="social-icon">
-                                <i class="fab fa-facebook text-3xl"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/tajkia-tashneem-rahman-885b06290/" target="_blank" class="social-icon">
-                                <i class="fab fa-linkedin text-3xl"></i>
-                            </a>
-                        </div>
+            <h2 class="text-4xl font-bold mb-12 text-center">Latest Posts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="blog-post bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">SEO Trends 2024</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Discover the latest strategies in search engine optimization...</p>
+                        <a href="#" class="text-purple-500 hover:text-purple-600">Read More →</a>
                     </div>
-                    <form class="space-y-6">
-                        <input type="text" placeholder="Your Name" class="w-full p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
-                        <input type="email" placeholder="Your Email" class="w-full p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
-                        <textarea rows="5" placeholder="Your Message" class="w-full p-3 bg-gray-50 dark:bg-gray-900 rounded-lg"></textarea>
-                        <button class="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg hover:shadow-lg transition">
-                            Send Message <i class="fas fa-paper-plane ml-2"></i>
-                        </button>
-                    </form>
                 </div>
+                <!-- Add more blog posts -->
             </div>
         </div>
+    </section>
+
+    <section id="contact" class="py-20">
+        <!-- Contact section from previous version -->
     </section>
 
     <script>
@@ -183,23 +134,23 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('translate-x-full');
         });
 
-        // Close mobile menu on click
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+        // Close menu on click outside
+        document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('translate-x-full');
+            }
         });
 
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+                mobileMenu.classList.add('translate-x-full');
             });
         });
     </script>
