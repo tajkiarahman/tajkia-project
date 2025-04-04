@@ -3,117 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tajkia Tashneem Rahman - Portfolio</title>
+    <title>Tajkia Tashneem Rahman - Digital Marketing Expert</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-gray-800 shadow-lg z-50">
+    <nav class="fixed w-full bg-white dark:bg-gray-800 shadow-lg z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-purple-400">Tajkia</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="hover:text-purple-400 transition">Home</a>
-                <a href="#about" class="hover:text-purple-400 transition">About</a>
-                <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
-                <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+            <a href="#" class="text-2xl font-bold text-purple-500">TTR</a>
+            <div class="flex items-center space-x-6">
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#expertise" class="nav-link">Expertise</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <i class="fas fa-sun text-yellow-400 hidden dark:inline-block"></i>
+                    <i class="fas fa-moon text-gray-600 dark:hidden"></i>
+                </button>
+                <button id="menu-btn" class="md:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-            <button id="menu-btn" class="md:hidden">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
         </div>
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden fixed w-full bg-gray-800 z-40 hidden">
+    <div id="mobile-menu" class="md:hidden fixed w-full bg-white dark:bg-gray-800 z-40 hidden shadow-lg">
         <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
-            <a href="#home" class="hover:text-purple-400">Home</a>
-            <a href="#about" class="hover:text-purple-400">About</a>
-            <a href="#projects" class="hover:text-purple-400">Projects</a>
-            <a href="#contact" class="hover:text-purple-400">Contact</a>
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#expertise" class="nav-link">Expertise</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
     </div>
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center pt-20">
         <div class="container mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Hi, I'm Tajkia Tashneem Rahman</h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-8">Full Stack Developer & UI Designer</p>
-            <button class="bg-purple-500 hover:bg-purple-600 px-8 py-3 rounded-full text-lg font-semibold transition">
-                View Work
-            </button>
+            <div class="animate-slide-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Tajkia Tashneem Rahman</h1>
+                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8">Digital Marketing Specialist</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#contact" class="bg-purple-500 hover:bg-purple-600 px-6 py-3 rounded-full text-lg font-semibold transition transform hover:scale-105">
+                        Get Started
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-800">
+    <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <img src="https://i.ibb.co/KpYTXLgy/Whats-App-Image-2025-04-01-at-01-01-12.jpg" alt="Profile" class="w-64 h-64 rounded-full shadow-lg">
-                <div class="md:w-2/3">
-                    <p class="text-gray-400 mb-6">
-                        I'm a passionate developer with 1 year of experience in creating web applications.
-                        Specialized in modern JavaScript frameworks and UI/UX design.
+            <h2 class="text-4xl font-bold mb-12 text-center animate-fade-in">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <img src="https://i.ibb.co/KpYTXLgy/Whats-App-Image-2025-04-01-at-01-01-12.jpg" 
+                     alt="Tajkia Tashneem Rahman" 
+                     class="w-72 h-72 rounded-full shadow-xl border-4 border-purple-500 hover:rotate-3 transition-transform duration-300">
+                <div class="md:w-2/3 space-y-6">
+                    <p class="text-lg text-gray-600 dark:text-gray-300">
+                        A passionate digital marketing enthusiast since August 2023, I specialize in crafting impactful online presences through strategic social media campaigns, captivating Canva designs, and data-driven Google marketing solutions.
                     </p>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div class="skill-item p-4 bg-gray-700 rounded-lg text-center">
-                            <i class="fab fa-js text-4xl text-yellow-400 mb-2"></i>
-                            <p>JavaScript</p>
+                        <div class="skill-item p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md text-center transform hover:scale-105 transition">
+                            <i class="fas fa-rocket text-3xl text-purple-500 mb-2"></i>
+                            <p class="font-semibold">Campaign Strategy</p>
                         </div>
-                        <!-- Add more skill items similarly -->
+                        <!-- Add more skill items -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20">
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-12 text-center">My Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
-                    <img src="https://i.ibb.co/KpYTXLgy/Whats-App-Image-2025-04-01-at-01-01-12.jpg" alt="Project" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">HeavensBD</h3>
-                        <p class="text-gray-400">Ecommerce Website based on Bangladesh</p>
-                    </div>
+            <h2 class="text-4xl font-bold mb-12 text-center">My Expertise</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="expertise-card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition">
+                    <i class="fab fa-google text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Google Ads</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Result-driven campaign management</p>
                 </div>
-                <!-- Add more project cards -->
+                <!-- Add more expertise cards -->
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800">
+    <section id="contact" class="py-20 bg-gray-100 dark:bg-gray-800">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-12 text-center">Get In Touch</h2>
-            <form class="max-w-2xl mx-auto">
-                <div class="grid gap-6 mb-6">
-                    <input type="text" placeholder="Name" class="w-full p-3 bg-gray-700 rounded-lg">
-                    <input type="email" placeholder="Email" class="w-full p-3 bg-gray-700 rounded-lg">
-                    <textarea rows="5" placeholder="Message" class="w-full p-3 bg-gray-700 rounded-lg"></textarea>
+            <h2 class="text-4xl font-bold mb-12 text-center">Let's Connect</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div class="contact-item p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+                        <i class="fas fa-envelope text-purple-500 mr-3"></i>
+                        <a href="mailto:rahmantajkia5@gmail.com" class="hover:text-purple-500">rahmantajkia5@gmail.com</a>
+                    </div>
+                    <div class="contact-item p-4 bg-white dark:bg-gray-700 rounded-lg shadow-md">
+                        <i class="fas fa-phone text-purple-500 mr-3"></i>
+                        <a href="tel:+8801303968587" class="hover:text-purple-500">+8801303968587</a>
+                    </div>
+                    <div class="flex space-x-6 mt-6">
+                        <a href="https://www.facebook.com/official.tashneem" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tajkia-tashneem-rahman-885b06290/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                    </div>
                 </div>
-                <button class="bg-purple-500 hover:bg-purple-600 px-8 py-3 rounded-full text-lg font-semibold transition w-full">
-                    Send Message
-                </button>
-            </form>
+                <form class="space-y-6">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
+                    <input type="email" placeholder="Your Email" class="w-full p-3 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
+                    <textarea rows="5" placeholder="Your Message" class="w-full p-3 bg-white dark:bg-gray-700 rounded-lg shadow-sm"></textarea>
+                    <button class="bg-purple-500 hover:bg-purple-600 px-8 py-3 rounded-full text-lg font-semibold transition transform hover:scale-105 w-full">
+                        Send Message
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-8">
-        <div class="container mx-auto px-6 text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="#" class="hover:text-purple-400"><i class="fab fa-github text-2xl"></i></a>
-                <a href="#" class="hover:text-purple-400"><i class="fab fa-linkedin text-2xl"></i></a>
-                <a href="#" class="hover:text-purple-400"><i class="fab fa-twitter text-2xl"></i></a>
-            </div>
-            <p class="text-gray-400">&copy; 2023 Tajkia. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
