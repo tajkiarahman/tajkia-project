@@ -1,17 +1,30 @@
 /* style.css */
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-slide-in {
+    animation: slideIn 1s ease-out;
 }
 
 .animate-fade-in {
     animation: fadeIn 1s ease-out;
 }
 
-.project-card {
-    transition: transform 0.3s ease;
+.nav-link {
+    @apply text-gray-600 dark:text-gray-300 hover:text-purple-500 transition-colors;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
+.social-icon {
+    @apply text-gray-600 dark:text-gray-300 hover:text-purple-500 transition-colors;
+}
+
+.expertise-card {
+    @apply transform transition duration-300 hover:-translate-y-2;
 }
