@@ -1,86 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	
-	<title>Assignment By Tajkia</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajkia Tashneem Rahman - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-	<nav>
-		<h1>Hello</h1>
-		<div>
-			<a href="#">Home</a>
-			<a href="#">Contact</a>
-			<a href="#">About</a>
-		</div>
-	</nav>
-	<table border="1" >
-		<tr>
-			<th>Name</th>
-			<th>Class</th>
-			<th>Roll</th>
-			<th>Subject</th>
-			<th>Marks</th>
-		</tr>
+<body class="bg-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-800 shadow-lg z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-purple-400">TJ</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-purple-400 transition">Home</a>
+                <a href="#about" class="hover:text-purple-400 transition">About</a>
+                <a href="#projects" class="hover:text-purple-400 transition">Projects</a>
+                <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+            </div>
+            <button id="menu-btn" class="md:hidden">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
 
-		<tr>
-			<td>Saima</td>
-			<td>Ten</td>
-			<td>01</td>
-			<td>English</td>
-			<td>80</td>
-	    </tr>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed w-full bg-gray-800 z-40 hidden">
+        <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+            <a href="#home" class="hover:text-purple-400">Home</a>
+            <a href="#about" class="hover:text-purple-400">About</a>
+            <a href="#projects" class="hover:text-purple-400">Projects</a>
+            <a href="#contact" class="hover:text-purple-400">Contact</a>
+        </div>
+    </div>
 
-	    <tr>
-	    	<td>Shila</td>
-	    	<td>Ten</td>
-	    	<td>02</td>
-	    	<td>English</td>
-	    	<td>85</td>
-	    </tr>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Hi, I'm Tajkia Tashneem RahmanT</h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-8">Full Stack Developer & UI Designer</p>
+            <button class="bg-purple-500 hover:bg-purple-600 px-8 py-3 rounded-full text-lg font-semibold transition">
+                View Work
+            </button>
+        </div>
+    </section>
 
-	    <tr>
-	    	<td>Soma</td>
-	    	<td>Ten</td>
-	    	<td>03</td>
-	    	<td>English</td>
-	    	<td>90</td>
-	    </tr>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <img src="https://via.placeholder.com/300" alt="Profile" class="w-64 h-64 rounded-full shadow-lg">
+                <div class="md:w-2/3">
+                    <p class="text-gray-400 mb-6">
+                        I'm a passionate developer with 1 year of experience in creating web applications.
+                        Specialized in modern JavaScript frameworks and UI/UX design.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="skill-item p-4 bg-gray-700 rounded-lg text-center">
+                            <i class="fab fa-js text-4xl text-yellow-400 mb-2"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <!-- Add more skill items similarly -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	    <tr>
-	    	<td>Lima</td>
-	    	<td>Ten</td>
-	    	<td>04</td>
-	    	<td>English</td>
-	    	<td>70</td>
-	    </tr>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <img src="https://via.placeholder.com/400x250" alt="Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">HeavensBD</h3>
+                        <p class="text-gray-400">Ecommerce Website based on Bangladesh</p>
+                    </div>
+                </div>
+                <!-- Add more project cards -->
+            </div>
+        </div>
+    </section>
 
-	    <tr>
-	    	<td>Lopa</td>
-	    	<td>Ten</td>
-	    	<td>05</td>
-	    	<td>English</td>
-	    	<td>90</td>
-	    </tr>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center">Get In Touch</h2>
+            <form class="max-w-2xl mx-auto">
+                <div class="grid gap-6 mb-6">
+                    <input type="text" placeholder="Name" class="w-full p-3 bg-gray-700 rounded-lg">
+                    <input type="email" placeholder="Email" class="w-full p-3 bg-gray-700 rounded-lg">
+                    <textarea rows="5" placeholder="Message" class="w-full p-3 bg-gray-700 rounded-lg"></textarea>
+                </div>
+                <button class="bg-purple-500 hover:bg-purple-600 px-8 py-3 rounded-full text-lg font-semibold transition w-full">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
 
-	  </table>
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-purple-400"><i class="fab fa-github text-2xl"></i></a>
+                <a href="#" class="hover:text-purple-400"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="#" class="hover:text-purple-400"><i class="fab fa-twitter text-2xl"></i></a>
+            </div>
+            <p class="text-gray-400">&copy; 2023 Tajkia. All rights reserved.</p>
+        </div>
+    </footer>
 
-	 <ol type="1"> 
-	 	<li>Hello Bangladesh</li>
-	 	<li>Hello Bangladesh</li>
-	 	<li>Hello Bangladesh</li>
-	 	<li>Hello Bangladesh</li>
-	 	<li>Hello Bangladesh</li>
-	  </ol> 
-	  <ul> 
-	 	<li>Hello Bangladesh</li>
-	 	<li>Hello Bangladesh</li>
-	 	<li>Hello Bangladesh</li>
-	 	<li>Hello Bangladesh</li>
-	 	<li>Hello Bangladesh</li>
-	  </ul> 
-
-
+    <script src="script.js"></script>
 </body>
 </html>
